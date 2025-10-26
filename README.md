@@ -1,66 +1,76 @@
 # Pastel Düğümleri
 
-Pastel Düğümleri, el yapımı makrome ve pastel tonlu dekor ürünlerini vitrine çıkaran modern bir React SPA'sıdır. Ürün kataloğu, sepet deneyimi ve üretici başvuru içerikleriyle küçük butik markalar için hazır bir satış sayfası sunar.
+Pastel Düğümleri, makrome üreticilerini pastel tonlarda bir vitrinle bir araya getiren butik bir satış uygulamasıdır. Hem üreticilerin el emeği ürünlerini doğrudan satabildiği hem de markamız üzerinden satış ortaklığı kurabildiği bir pazar yeri deneyimi sunar.
 
 ## İçindekiler
-- [Öne Çıkanlar](#öne-çıkanlar)
+- [Projenin Amacı](#projenin-amacı)
 - [Ekran Görüntüsü](#ekran-görüntüsü)
 - [Teknolojiler](#teknolojiler)
-- [Kurulum](#kurulum)
+- [Kurulum Adımları](#kurulum-adımları)
 - [NPM Komutları](#npm-komutları)
 - [Proje Yapısı](#proje-yapısı)
 - [Özelleştirme İpuçları](#özelleştirme-ipuçları)
 - [Lisans](#lisans)
 
-## Öne Çıkanlar
-- 🔍 Türkçe karakter desteğiyle çalışan akıllı ürün arama
-- 🛒 Adet yönetimi, sepetten çıkarma ve sepet özetini gösteren gelişmiş sepet deneyimi
-- ✨ Pastel tonlarda tasarlanmış, mobil uyumlu ve sade arayüz
-- 🤝 El işi üreticilerini teşvik eden hikâye kartları ve başvuru CTA alanları
-- ⚡ Tek dependency React ekosistemi; hızlı kurulum, hızlı dağıtım
+## Projenin Amacı
+- El yapımı makrome ürünleri üreten kadın girişimcilerin ürünlerini dijital vitrine taşımak.
+- Üreticilerin stok ve siparişlerini yönetmesini kolaylaştıracak temel sepet fonksiyonlarını sağlamak.
+- Markamızın üreticilerle iş birliği kurmasını mümkün kılan iletişim ve başvuru adımlarını merkezileştirmek.
+- Pastel tonlarda, güven veren ve hikâye anlatımını öne çıkaran kullanıcı arayüzüyle butik bir marka deneyimi yaşatmak.
 
 ## Ekran Görüntüsü
-![Pastel Düğümleri arayüzü](assets/readme-cover.jpg)
+![Pastel Düğümleri ürün sayfası](assets/pastel-dugumleri-ui.png)
 
 ## Teknolojiler
 - React 18 + React Router DOM 6
 - React Scripts 5 (CRA tabanlı yapılandırma)
-- Vanilla CSS ile responsive tasarım ve pastel renk paleti
+- Vanilla CSS ile responsive pastel tema
 
-## Kurulum
-```bash
-# Depoyu kopyalayın
-git clone git@github.com:yusuf3641/Pastel_Dugumleri.git
-cd Pastel_Dugumleri
-
-# Bağımlılıkları yükleyin
-npm install
-
-# Geliştirme sunucusunu başlatın
-npm start
-```
-> Uygulama varsayılan olarak `http://localhost:3000` adresinde çalışır.
+## Kurulum Adımları
+1. **Gereksinimler**
+   - Node.js 16 veya üzeri (kontrol için `node -v`)
+   - npm 8 veya üzeri (kontrol için `npm -v`)
+2. **Depoyu klonlayın**
+   ```bash
+   git clone git@github.com:yusuf3641/Pastel_Dugumleri.git
+   cd Pastel_Dugumleri
+   ```
+3. **Bağımlılıkları yükleyin**
+   ```bash
+   npm install
+   ```
+4. **Geliştirme sunucusunu başlatın**
+   ```bash
+   npm start
+   ```
+   - Varsayılan olarak tarayıcınız `http://localhost:3000` adresine yönlendirilir.
+   - Otomatik açılmazsa URL'yi manuel ziyaret edebilirsiniz.
+5. **Prod yapısı almak isterseniz**
+   ```bash
+   npm run build
+   ```
+   - Statik dosyalar `build/` klasörüne oluşturulur ve herhangi bir statik sunucuda yayınlanabilir.
 
 ## NPM Komutları
-- `npm start` : Hot reload destekli geliştirme sunucusu
-- `npm run build` : Prod için optimize edilmiş statik çıktı (`build/`)
+- `npm start` – Hot reload destekli geliştirme sunucusu
+- `npm run build` – Üretim için optimize edilmiş paket
 
 ## Proje Yapısı
 ```text
 Pastel_Düğümleri/
 ├─ public/
-│  ├─ images/                  # Ürün & hikâye görselleri
+│  ├─ images/                  # Ürün ve üretici hikâyesi görselleri
 │  ├─ index.html               # CRA giriş noktası
 │  └─ logo.svg
 ├─ src/
 │  ├─ App.js                   # Router, navbar ve sepet yönetimi
 │  ├─ App.css                  # Global pastel tema stilleri
 │  ├─ Cart.js                  # Sepet sayfası ve adet kontrolleri
-│  ├─ Contact.js               # İletişim formu
-│  ├─ Home.js                  # Hero, üretici hikâyeleri
-│  └─ Products.js              # Arama filtresi + ürün kartları
+│  ├─ Contact.js               # İletişim formu ve CTA
+│  ├─ Home.js                  # Üretici hikâyeleri ve başvuru alanı
+│  └─ Products.js              # Arama, filtreleme ve ürün kartları
 ├─ assets/
-│  └─ readme-cover.jpg         # README için tanıtım görseli
+│  └─ pastel-dugumleri-ui.png  # README’de kullanılan proje ekran görüntüsü
 ├─ package.json
 ├─ package-lock.json
 ├─ README.md
@@ -68,10 +78,10 @@ Pastel_Düğümleri/
 ```
 
 ## Özelleştirme İpuçları
-- Yeni ürünler eklemek için `src/Products.js` içindeki `products` dizisine yeni objeler ekleyin.
-- Tema renklerini ve tipografiyi `src/App.css` üzerinden hızlıca güncelleyebilirsiniz.
-- Üretici hikâyelerini `Home.js` içindeki kartlarda düzenleyebilir, yeni ifadeler ekleyebilirsiniz.
-- `public/images/` klasörüne yeni görseller ekleyerek mevcut ürün kartlarını zenginleştirin.
+- Yeni ürünler eklemek için `src/Products.js` içindeki `products` dizisini güncelleyin.
+- Tema renkleri ve tipografiyi `src/App.css` içerisinde hızlıca değiştirebilirsiniz.
+- Üretici hikâyelerini `Home.js` üzerinde düzenleyerek marka tonunu kişiselleştirin.
+- `public/images/` klasörüne yeni görseller ekleyerek ürün kataloğunu genişletin.
 
 ## Lisans
 Bu proje MIT Lisansı ile sunulmaktadır. Ayrıntılar için [LICENSE](LICENSE) dosyasını inceleyebilirsiniz.
