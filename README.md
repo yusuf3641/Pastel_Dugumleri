@@ -4,7 +4,7 @@ Pastel Düğümleri, makrome üreticilerini pastel tonlarda bir vitrinle bir ara
 
 ## İçindekiler
 - [Projenin Amacı](#projenin-amacı)
-- [Ekran Görüntüsü](#ekran-görüntüsü)
+- [Arayüz Önizlemeleri](#arayüz-önizlemeleri)
 - [Teknolojiler](#teknolojiler)
 - [Kurulum Adımları](#kurulum-adımları)
 - [NPM Komutları](#npm-komutları)
@@ -18,8 +18,10 @@ Pastel Düğümleri, makrome üreticilerini pastel tonlarda bir vitrinle bir ara
 - Markamızın üreticilerle iş birliği kurmasını mümkün kılan iletişim ve başvuru adımlarını merkezileştirmek.
 - Pastel tonlarda, güven veren ve hikâye anlatımını öne çıkaran kullanıcı arayüzüyle butik bir marka deneyimi yaşatmak.
 
-## Ekran Görüntüsü
-![Pastel Düğümleri ürün sayfası](assets/pastel-dugumleri-ui.png)
+## Arayüz Önizlemeleri
+| Üretici Hikâyesi & CTA | Ürün Kataloğu |
+| --- | --- |
+| ![Pastel Düğümleri üretici hikâyesi ekranı](assets/pastel-dugumleri-hero.png) | ![Pastel Düğümleri ürün sayfası](assets/pastel-dugumleri-ui.png) |
 
 ## Teknolojiler
 - React 18 + React Router DOM 6
@@ -70,7 +72,8 @@ Pastel_Düğümleri/
 │  ├─ Home.js                  # Üretici hikâyeleri ve başvuru alanı
 │  └─ Products.js              # Arama, filtreleme ve ürün kartları
 ├─ assets/
-│  └─ pastel-dugumleri-ui.png  # README’de kullanılan proje ekran görüntüsü
+│  ├─ pastel-dugumleri-hero.png  # README’de kullanılan üretici hikâyesi ekranı
+│  └─ pastel-dugumleri-ui.png    # README’de kullanılan ürün kataloğu ekranı
 ├─ package.json
 ├─ package-lock.json
 ├─ README.md
