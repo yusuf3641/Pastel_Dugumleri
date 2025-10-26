@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Node / JS
+node_modules/
+*.log
+
+# Editor
+.vscode/
+.idea/
+
+a/
